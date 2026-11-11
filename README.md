@@ -1,18 +1,30 @@
 # Hi, I'm Vamsi Kattera
 
-AI engineer (MSc Advanced Computer Science, University of Strathclyde). I build and deploy LLM and computer vision applications, and I care about measuring whether they work.
+AI engineer based in Glasgow, open to roles anywhere in the UK. MSc Advanced Computer Science, University of Strathclyde.
 
-## Featured project
+I build LLM and retrieval systems and measure them against labelled data before I call them done.
 
-### [GOV.UK RAG Assistant](https://github.com/Vamsi-Kattera/govuk-rag) | [Live demo](https://huggingface.co/spaces/VamsiKattera/govuk-rag)
-Cited answers about UK visas, right to work and benefits. Hybrid search (BM25 + embeddings) with cross-encoder reranking, refuses when the pages don't cover the question, evaluated on a 42-question test set (top-1 retrieval 74% to 86%; 10/10 out-of-scope questions refused). FastAPI, Docker, CI, deployed on Hugging Face Spaces.
+**Portfolio:** https://vamsi-kattera.github.io/portfolio/
+
+## What I'm proud of most
+
+**[Obelus](https://github.com/Vamsi-Kattera/Obelus)** is a contract-review tool. It finds a clause, quotes the exact text, checks that the quote really exists in the contract, and says "not found" when it can't. I measured it on 510 expert-labelled contracts and ran the final test once, on 102 contracts it had never been tuned on: it matched 59% to 75% of the experts' text, up from 22% to 46% for keyword search. One number got worse, and the README says so.
+[Live demo](https://huggingface.co/spaces/VamsiKattera/obelus) · Python, FastAPI, BM25, Gemini API, Docker, GitHub Actions
+
+**[GOV.UK RAG assistant](https://huggingface.co/spaces/VamsiKattera/govuk-rag)** answers questions about UK visas, right to work and employment rights from 129 GOV.UK pages, with citations, and refuses when the pages don't cover the question. 95% of answers judged correct on a hand-reviewed set, and all 10 out-of-scope questions refused.
+Hybrid retrieval (vector search and BM25), a cross-encoder reranker, FastAPI, Streamlit, Docker
 
 ## Other projects
 
-- [AI Traffic Monitoring System](https://github.com/Vamsi-Kattera/AI-Intelligence-Traffic-Monitoring-System): YOLOv8 + ByteTrack vehicle detection, counting, lane zones and traffic analytics behind a FastAPI service with a React dashboard.
-- [Adaptive Coding Practice](https://github.com/Vamsi-Kattera/Coding-Challenges-using-GENAI): Streamlit app with adaptive difficulty and Gemini-generated hints.
-- [AI or Real Image Identifier](https://github.com/Vamsi-Kattera/AI-or-Real-Image-Detector): MobileNetV2 transfer-learning classifier with a Streamlit app.
+More are on my [portfolio](https://vamsi-kattera.github.io/portfolio/): an AI traffic-monitoring system (YOLOv8, ByteTrack, FastAPI and a React dashboard), an AI-or-real image detector, an adaptive coding practice app, and a voice assistant.
 
-## Tools
+## What I work with
 
-Python, FastAPI, TensorFlow/Keras, scikit-learn, OpenCV, Gemini API, Chroma, Docker, GitHub Actions
+Python, FastAPI, Docker, GitHub Actions, pytest, Gemini and OpenAI APIs, retrieval (BM25, vector search, reranking), structured output with Pydantic, evaluation against labelled data, computer vision (YOLOv8), scikit-learn.
+
+## How I work
+
+- Decide how I'll measure it before I build it.
+- Keep a test set I don't touch until the end.
+- Read the failures before changing the model.
+- Report what got worse, not only what improved.
